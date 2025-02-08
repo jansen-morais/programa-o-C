@@ -11,7 +11,7 @@ void limpar_buffer() { //serve para limpara os espaçoes de linha de uma forma m
     // Verificação adicional: se o buffer não estiver vazio após a limpeza,
 // descarta o restante dos caracteres
     if (ungetc(c, stdin) != EOF) { // Devolve o último caractere lido para o buffer
-    while ((c = getchar()) != '\n' && c != EOF);
+    while ((c = getchar()) != '\n' && c != EOF); //limpa o espaço em branco deixado
     }
 }
 
@@ -34,7 +34,7 @@ int main(){
     scanf("%3s",resposta); //vai ler e armazenar a resposta 
         //while ((c = getchar()) != '\n' && c != EOF);
     getchar();//limpa o caractere de nova linha do buffer
-        for(int i=0;resposta[i];i++){
+        for(int i=0;resposta[i];i++){ // Converter a resposta para minúsculas para evitar erros de comparação
             resposta[i]=tolower(resposta[i]);//vai ler e e converter a resposta mara minuscula
         }
             if(strcmp(resposta,"sim")==0){//aqui lera a resposta "sim" e iniciara o programa, lembrando que as funçoes precisaram estarem dentro destes colchetes.
@@ -46,7 +46,7 @@ int main(){
         
            
         printf("Me fale seu nome:\n:");
-        fgets(nome, sizeof(nome), stdin);
+        fgets(nome, sizeof(nome), stdin); //le a string, incluindo espaçoes em branco e armazena em sua devida variavel
         nome[strcspn(nome, "\n")] = 0; // Remove a quebra de linha do nome
 
         printf("Qual a sua idade?\n:");
@@ -68,28 +68,28 @@ int main(){
         printf("Qual a sua profissão?\n:");
         fgets(profissao, sizeof(profissao), stdin); // le e aramzena 
         profissao[strcspn(profissao, "\n")] = 0; // removea a quebra de linha 
-            profissao[strcspn(profissao, "\n")] = 0;// Remove a quebra de linha do final da string, se existir
+            //profissao[strcspn(profissao, "\n")] = 0;// Remove a quebra de linha do final da string, se existir
                 
                 
                 
         
             printf("Obrigado...\n\n\n");
-            sleep(2.5);
+            sleep(2.5);//pausa no programa
             printf("Nome: %s\nIdade: %d\nNatural: %s\nResidencia: %s\nProfissão: %s\n",nome, idade, natural, reside, profissao);
-            getchar();
+            getchar(); //limpa o buffer do teclado,(O ESPAÇO DEIXADO PRA TRAZ)
             sleep(1.5);
-            printf("...\n");
+            printf("...\n"); //SOMENTE PULA UMA LINHA 
             sleep(1.5);
 
     char resposta2[4];//para diferenciar a variavel da primeira resposta         
-            printf("Correto? (sim/não)\n");
+            printf("Correto? (sim/não)\n"); //Aqui o progama vai rezer a coleta de informações caso não estajan corretas 
             scanf("%3s",resposta2);//vai captar a resposta
             getchar();
                 
 
 
             } 
-    else{
+    else{// finaliza o programa em caso de respota negativa "não"
     printf("Ok...\n");
     sleep(3);//pausa de 3 segundos.
     printf("Obrido! e ate a proxima...\n"); sleep(3.5);//pausa de 3 segundos.

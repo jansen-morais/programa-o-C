@@ -2,6 +2,7 @@
 #include <string.h> // Biblioteca para manipulação de strings
 #include <ctype.h> // Biblioteca para funções de caracteres (tolower)
 
+
 int main() {
     char resposta[4]; // Variável para armazenar a resposta do usuário (sim/não)
     int iniciar = 0; // Variável para controlar o início do programa (0 = não, 1 = sim)
