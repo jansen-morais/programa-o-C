@@ -74,7 +74,7 @@ int main(){
                 
         
             printf("Obrigado...\n\n\n");
-            sleep(2.5);//pausa no programa
+            sleep(2);//pausa no programa
             printf("Nome: %s\nIdade: %d\nNatural: %s\nResidencia: %s\nProfissão: %s\n",nome, idade, natural, reside, profissao);
             getchar(); //limpa o buffer do teclado,(O ESPAÇO DEIXADO PRA TRAZ)
             sleep(1.5);
@@ -82,10 +82,57 @@ int main(){
             sleep(1.5);
 
     char resposta2[4];//para diferenciar a variavel da primeira resposta         
-            printf("Correto? (sim/não)\n"); //Aqui o progama vai rezer a coleta de informações caso não estajan corretas 
+            printf("Deseja corrigir algo? (sim/não)\n"); //Aqui o progama vai rezer a coleta de informações caso não estajan corretas 
             scanf("%3s",resposta2);//vai captar a resposta
             getchar();
-                
+               for(int i=0;resposta2[i];i++){ // Converter a resposta para minúsculas para evitar erros de comparação
+                resposta2[i]=tolower(resposta2[i]);//vai ler e e converter a resposta mara minuscula
+        }
+                if(strcmp(resposta2,"sim")==0){
+                printf("Repita por gentilza...\n");
+                sleep(1.5);
+
+                printf("Me fale seu nome:\n:");
+            fgets(nome, sizeof(nome), stdin); //le a string, incluindo espaçoes em branco e armazena em sua devida variavel
+            nome[strcspn(nome, "\n")] = 0; // Remove a quebra de linha do nome
+
+            printf("Qual a sua idade?\n:");
+            scanf("%d",&idade);//le o string em valor decimal(somente numeros)
+            getchar(); //consome o espaço em branco deixado pelo scanf
+            //char idade_str[10]; // é necessária porque a função fgets lê a entrada como uma string, 
+            //mesmo que essa entrada seja um número.
+            //fgets(idade_str, sizeof(idade_str), stdin);
+            //idade = atoi(idade_str); // Converte a idade para inteiro
+
+            printf("Onde vc nasceu?\n:");
+            fgets(natural, sizeof(natural), stdin);
+            natural[strcspn(natural, "\n")] = 0;  // Remove a quebra de linha da naturalidade
+
+            printf("Onde você mora?\n:");
+            fgets(reside, sizeof(reside), stdin);
+            reside[strcspn(reside, "\n")] = 0; // remove a quebra de linha 
+
+            printf("Qual a sua profissão?\n:");
+            fgets(profissao, sizeof(profissao), stdin); // le e aramzena 
+            profissao[strcspn(profissao, "\n")] = 0; // removea a quebra de linha 
+            //profissao[strcspn(profissao, "\n")] = 0;// Remove a quebra de linha do final da string, se existir
+        
+            printf("Nome: %s\nIdade: %d\nNatural: %s\nResidencia: %s\nProfissão: %s\n",nome, idade, natural, reside, profissao);
+            getchar(); //limpa o buffer do teclado,(O ESPAÇO DEIXADO PRA TRAZ)
+            sleep(1.5);
+
+             printf("Ok...\n");
+              printf("Muito obrigado...\n");
+              printf("\n\n");
+
+
+              }else{//finalizao programa apoz a segunda rodada de perguntas.
+
+              printf("Ok...\n");
+              printf("Muito obrigado...\n");
+              printf("\n\n");
+
+              }
 
 
             } 
