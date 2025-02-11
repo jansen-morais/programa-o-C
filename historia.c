@@ -26,7 +26,7 @@ int print_digitado(const char *format, ...){//função personalizada para imprim
         va_end(args);
         return -1; //retorna o valor negativo para indicar o erro 
     }
-
+    
     for (int i=0; i ,len; i++){//imprime cada caractere com artraso
         printf("%c", buffer[i]);
         fflush(stdout);
@@ -47,7 +47,13 @@ int print_digitado(const char *format, ...){//função personalizada para imprim
 
     char nome[50];
         print_digitado("Como vc se chama?\n");
-
+        fgets(nome, sizeof(nome),stdin);
+        nome[strcspn(nome, "\n")] = 0;
+        
+        sleep(1.5);
+        print_digitado("...\n");
+        sleep(1.5);
+        print_digitado("Entendi, %s, nome legal...:)\n",nome);
 
 
 
