@@ -80,16 +80,25 @@ char resposta[4];
         }
     if(strcmp(resposta,"sim")==0){
         print_digitado("Voçê sabia que\n");
-        print_digitado("Todas as corujas têm uma postura ereta e olhos para frente,\n");
-        print_digitado("o que as dá visão binocular, como a dos seres humanos.\n");
-        print_digitado("Entretanto, os olhos delas não são esferas,\n");
-        print_digitado("mas sim tubos que providenciam uma percepção de profundidade melhor e permite que elas vejam suas presas a grande distância\n");
-        print_digitado("por conta disso a visõa de perto delas fica prejudicada\n");
-        print_digitado("olhos de uma coruja têm uma estrutura óssea como suporte, o que não permite que eles se virem.\n");
-        print_digitado("por conta disso, elas conseguem virar a cabeça por 270 graus(135 para cada lado)\n");
-        print_digitado("Legau né?\n");
-        print_digitado("no mais é so isso, ate a proxima\n...\n");
 
+        print_digitado("Todas as corujas têm uma postura ereta e olhos para frente,\n");
+sleep(1.5);
+        print_digitado("o que as dá visão binocular, como a dos seres humanos.\n");
+        //sleep(1);
+        print_digitado("Entretanto, os olhos delas não são esferas,\n");
+        sleep(1);
+        print_digitado("mas sim tubos que providenciam uma percepção de profundidade melhor e permite que elas vejam suas presas a grande distância\n");
+        sleep(1);
+        print_digitado("por conta disso a visõa de perto delas fica prejudicada\n");
+        sleep(1);
+        print_digitado("e tambem os olhos de uma coruja têm uma estrutura óssea como suporte, o que não permite que eles se virem.\n");
+        sleep(1.5);
+        print_digitado("por conta disso, elas conseguem virar a cabeça por 270 graus(135 para cada lado)\n");
+        sleep(1);
+        print_digitado("Legau né?\n");
+        sleep(1.5);
+        print_digitado("no mais é so isso, ate a proxima\n...\n");
+        sleep(2);
 
 
 
