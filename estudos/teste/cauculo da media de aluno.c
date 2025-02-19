@@ -42,12 +42,16 @@ int main(){
     float media;
 
     print_digitado(" . . .\n");/*uso este "print_digitado" para deixar mais organico*/
+    sleep(1.2);
     print_digitado("...iniciando...\n");
-    print_digitado("***Programa de cauculo de média***\n\n");
+    sleep(1.2);
+    print_digitado("***Programa de calculo de média***\n\n");
+    sleep(2);
 
     print_digitado("Digite a primeira nota:");
     //scanf("%f", &nota1);/*lembrar de mudar o percentual para"%f" para leo algarismo dcimal*/
     scanf("%d", &nota1);
+    
 
     print_digitado("Digite a segunda nota:");
     scanf("%d", &nota2);
@@ -58,9 +62,9 @@ int main(){
     media = (float)(nota1 + nota2 + nota3) / 3;/*aqui coloco a expreção "(float)" abtes do comendo para forçar a converção,
     de um número nterio para flutuante e tambem defino que a media sera o resultado das equaçoes*/
     
-    //printf("A media é: %.2f\n",media);/*a expreção "%.2f"vai impromir somente duas casas decimais*/
-    printf("A media é: %.1f\n",media);/*a expreção "%.1f"vai impromir somente uma casa decimal*/
-
+    printf("A media é: %.2f\n",media);/*a expreção "%.2f"vai impromir somente duas casas decimais*/
+    //printf("A media é: %.1f\n",media);/*a expreção "%.1f"vai impromir somente uma casa decimal*/
+    sleep(1.5);
     print_digitado("Obrigado...\n;)\n");
 
     
