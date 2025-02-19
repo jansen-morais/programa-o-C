@@ -56,7 +56,7 @@ int main(){
     scanf("%d", &nota3);
 
     media = (float)(nota1 + nota2 + nota3) / 3;/*aqui coloco a expreção "(float)" abtes do comendo para forçar a converção,
-    de um número nterio para flutuante*/
+    de um número nterio para flutuante e tambem defino que a media sera o resultado das equaçoes*/
     
     //printf("A media é: %.2f\n",media);/*a expreção "%.2f"vai impromir somente duas casas decimais*/
     printf("A media é: %.1f\n",media);/*a expreção "%.1f"vai impromir somente uma casa decimal*/
