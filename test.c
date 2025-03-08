@@ -11,8 +11,10 @@ int main(){
     printf("Deseja começar?\n");
     scanf("%3s",&resposta);
 
-    if (strcmp(resposta, "sim") == 0) // Alterado: Usa strcmp() para comparar strings
-    {
+    if (strcmp(resposta, "sim") == 0) //  Usa strcmp() para comparar strings
+    { /*strcmp(resposta, "sim") compara a string armazenada em resposta com a string literal "sim".
+        A função strcmp() retorna 0 se as strings forem iguais. 
+        Portanto, a condição verifica se o usuário digitou "sim".*/
     printf("tudo bem..\nPoderia se aprensentar por gentileza?\n");
     printf("Qual o seu nome?\n:"); scanf("%29s",&nome);
     printf("Quantos anos voçê tem?\n:"); scanf("%d", &idade);
