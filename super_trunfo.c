@@ -8,7 +8,7 @@
 // Siga os comentários para implementar cada parte do desafio.
 //Teste jansen morais
 
-int main() {
+int main() { // Função principal do programa
     // Declaração das variáveis para armazenar os dados das cartas
     int carta1, carta2; // Variáveis para armazenar os códigos das cartas (não usadas no código atual)
     char codigo1[10], codigo2[10]; // Códigos das cartas (strings, com tamanho aumentado para evitar buffer overflow)
@@ -25,92 +25,88 @@ int main() {
 
 
     // Cabeçalho do jogo
-    printf("*** Jogo super trunfo***\n\n");
+    printf("*** Jogo super trunfo***\n\n"); // imprime a mensagem na tela
 
     // Coleta de dados da primeira carta
-    printf("Por favor, insira o código da carta 1\n:");
+    printf("Por favor, insira o código da carta 1\n:"); // imprime a mensagem na tela
     scanf("%9s", codigo1); // Lê o código da carta (limitando a 9 caracteres para evitar buffer overflow)
 
-    printf("Por favor, insira o nome da cidade\n:");
+    printf("Por favor, insira o nome da cidade\n:"); // imprime a mensagem na tela
     scanf(" %29[^\n]", nome1); // Lê o nome da cidade (lê a linha inteira, incluindo espaços)
     getchar();// limpa o bufer do teclado
 
-    printf("Por favor, insira a quantidade populacional\n:");
+    printf("Por favor, insira a quantidade populacional\n:"); // imprime a mensagem na tela
     scanf("%f", &populacao1); // Lê a população da cidade
 
-    printf("Por favor, insira o valor correspondente a area em km°²\n:");
+    printf("Por favor, insira o valor correspondente a area em km°²\n:"); // imprime a mensagem na tela
     scanf("%u", &area1); // Lê a área da cidade (corrigido para %u)
 
-    printf("Por favor, insira a quantidade de pontos turisticos\n:");
+    printf("Por favor, insira a quantidade de pontos turisticos\n:"); // imprime a mensagem na tela
     scanf("%d", &turismo1); // Lê o número de pontos turísticos da cidade
 
-    printf("Por favor, insira o valor do PIB\n:");
+    printf("Por favor, insira o valor do PIB\n:"); // imprime a mensagem na tela
     scanf("%u", &pib1); // Lê o PIB da cidade
 
     printf("\n"); // Adiciona uma linha em branco para separar as cartas
-    printf("Entre com as informações da segunda carta\n");
+    printf("Entre com as informações da segunda carta\n"); // imprime a mensagem na tela
     getchar();// limpa o bufer do teclado
 
     // Coleta de dados da segunda carta
-    printf("Por favor, insira o código da carta 2\n:");
+    printf("Por favor, insira o código da carta 2\n:"); // imprime a mensagem na tela
     scanf("%9s", codigo2); // Lê o código da carta (limitando a 9 caracteres)
 
-    printf("Por favor, insira o nome da cidade\n:");
+    printf("Por favor, insira o nome da cidade\n:"); // imprime a mensagem na tela
     scanf(" %29[^\n]", nome2); // Lê o nome da cidade (lê a linha inteira)
     getchar();//limpa o bufer do teclado
 
-    printf("Por favor, insira a quantidade populacional\n:");
+    printf("Por favor, insira a quantidade populacional\n:"); // imprime a mensagem na tela
     scanf("%f", &populacao2); // Lê a população da cidade
 
-    printf("Por favor, insira o valor correspondente a area em km°²\n:");
+    printf("Por favor, insira o valor correspondente a area em km°²\n:"); // imprime a mensagem na tela
     scanf("%u", &area2); // Lê a área da cidade (corrigido para %u)
 
-    printf("Por favor, insira a quantidade de pontos turisticos\n:");
+    printf("Por favor, insira a quantidade de pontos turisticos\n:"); // imprime a mensagem na tela
     scanf("%d", &turismo2); // Lê o número de pontos turísticos da cidade
 
-    printf("Por favor, insira o valor do PIB\n:");
+    printf("Por favor, insira o valor do PIB\n:"); // imprime a mensagem na tela
     scanf("%u", &pib2); // Lê o PIB da cidade
 
     // Exibição dos dados das cartas
     printf("\n*** Dados da Carta 1 ***\n");
     printf("Código: %s\n", codigo1); // Exibe o código da carta
     printf("Nome: %s\n", nome1); // Exibe o nome da cidade
-    printf("População: %.2f\n", populacao1); // Exibe a população da cidade
-    printf("Área: %u km²\n", area1); // Exibe a área da cidade
+    printf("População: %.3f\n", populacao1); // Exibe a população da cidade
+    printf("Área: %.3u km²\n", area1); // Exibe a área da cidade
     printf("Pontos Turísticos: %d\n", turismo1); // Exibe o número de pontos turísticos da cidade
-    printf("PIB: %u\n", pib1); // Exibe o PIB da cidade
-    densidade1 = (float)populacao1/area1;// linha que fara o cauculo da densidade populacional
-    printf("Densidade populacional: %.2f, hab/km²\n", densidade1);// Exibe a densidade populacional da cidade
-    renda1 = (float)pib1 / populacao1;// linha que fara o cauculo do PIB per capta
-    printf("PIB per capita: %.3f, de reais\n", renda1);// exibe o PIB per capita
+    printf("PIB: %.3u\n", pib1); // Exibe o PIB da cidade
+    densidade1 = (float)populacao1/area1; // linha que fara o cauculo da densidade populacional
+    printf("Densidade populacional: %.3f, hab/km²\n", densidade1); // Exibe a densidade populacional da cidade
+    renda1 = (float)pib1 / populacao1; // linha que fara o cauculo do PIB per capta
+    printf("PIB per capita: %.3f, de reais\n", renda1); // exibe o PIB per capita
 
-    printf("\n\n*** Segunda carta***\n\n");
-    //getchar(); // limpa o bufer do teclado
+    printf("\n\n*** Segunda carta***\n\n"); // imprime a mensagem na tela
+    
 
-    printf("\n*** Dados da Carta 2 ***\n");
+    printf("\n*** Dados da Carta 2 ***\n"); // imprime a mensagem na tela
     printf("Código: %s\n", codigo2); // Exibe o código da carta
     printf("Nome: %s\n", nome2); // Exibe o nome da cidade
-    printf("População: %.2f\n", populacao2); // Exibe a população da carta
-    printf("Área: %u km²\n", area2); // Exibe a área da carta
+    printf("População: %.3f\n", populacao2); // Exibe a população da carta
+    printf("Área: %.3u km²\n", area2); // Exibe a área da carta
     printf("Pontos Turísticos: %d\n", turismo2); // Exibe os pontos turisticos da carta
-    printf("PIB: %u\n", pib2); // Exibe o PIB da carta
-    densidade2 = (float)populacao2/area2;// linha que fara o cauculo da densidade populacional
-    printf("Densidade populacional: %.2f, hab/km²\n", densidade2);// Exibe a densidade populacional da cidade
-    renda2 = (float)pib2 / populacao2;// linha que fara o cauculo do PIB per capta
-    printf("PIB per capita: %.3f, de reais\n", renda2);// exibe o PIB per capita
-    //printf("\nResultado de comparações\n\n");
+    printf("PIB: %.7u\n", pib2); // Exibe o PIB da carta
+    densidade2 = (float)populacao2/area2; // linha que fara o cauculo da densidade populacional
+    printf("Densidade populacional: %.3f, hab/km²\n", densidade2); // Exibe a densidade populacional da cidade
+    renda2 = (float)pib2 / populacao2; // linha que fara o cauculo do PIB per capta
+    printf("PIB per capita: %.3f, de reais\n", renda2); // exibe o PIB per capita
     getchar(); // limpa o bufer do teclado
     
-    printf("\n### Comparações ###\n\n"); // Exibe o testo para escolhas
-    //getchar(); // limpa o bufer do teclado  
-    printf("Deseja fazer a comparação altomatica?\nCaso não tera que escolher o atributo?\n\n"); // Exibe o testo para escolhas
-    
+    printf("\n### Comparações ###\n\n"); // Exibe o testo para escolha  
+    printf("Deseja fazer a comparação altomatica?\nCaso não, tera que escolher o atributo?\n\n"); // Exibe o testo para escolhas
     printf("Para escolher entre a comparação total e unitara\n"); // Exibe o testo para escolhas
-    printf("sim. Para escolher se todos serão compradas automaticamente\n"); // Exibe o testo para escolhas
-    printf("não. Para escolher quai atributos serão comprados\n"); // Exibe o testo para escolhas 
-    printf("Resposta:"); 
-    
-    scanf("%3s",&resposta); // Le e armazena a resposta
+    printf("sim. Para escolher, se todos serão compradas automaticamente\n"); // Exibe o testo para escolhas
+    printf("não. Para escolher, quais atributos serão comprados\n"); // Exibe o testo para escolhas 
+    printf("Resposta:"); // Faz a coleta da resposta
+    scanf("%3s",&resposta); // Le e armazena a resposta na variavem correta
     getchar(); // limpa o bufer do teclado
     
 
@@ -153,7 +149,7 @@ int main() {
             printf("A carta 2 venceu no queisto, PIB...\n"); // imprime a mensagen se o pib2 for maior
             falsas++; // incrementa a contador de respostas falsas
         }
-        if (densidade1 > densidade2){ // verifica se o densidade1 e maior que o densidade2
+        if (densidade1 < densidade2){ // verifica se o densidade1 e maior que o densidade2
             printf("A carta 1 venceu no queisto, densidade populacional...\n"); // imprime a mensagem se o pib1 for maior
             verdadeiras++;// incrementa o contador de resposta
         }else{ //se o densidade2 for mao que o densidade1
@@ -176,148 +172,161 @@ int main() {
         printf("\n--- Ranking ---\n"); // Imprime o cabeçalho do ranking
         if (verdadeiras > falsas){ // verifica se as verdadeiras são maiores que as falsas
             printf("A carta 1 venceu...\n"); // imprime a mensagem se as verdadeiras forem maiores
-            printf("\nParabens...\n\n");
+            printf("\nParabens...\n\n"); // imprime a mensagem na tela
         }else { //se as falsas forem maiores que as verdadeiras
             printf("A carta 2 vence...\n"); // imprime a mensagem se as falsas forem maiores
-            printf("\nParabens...\n\n");
+            printf("\nParabens...\n\n"); // imprime a mensagem na tela
         }
     
-    }else{
-        
-        printf("\n"); // Para pular uma linha e deixar o codigo mais legivel ao execultar 
-        getchar(); // limpa o bufer do teclado
-        printf("1. Para População \n");
-        printf("2. Para areá em km²\n");
-        printf("3. Para puntos turisticos\n");
-        printf("4. Para PIB\n");
-        printf("5. Para Densidade populacional\n");
-        printf("6. PIB Per-Carpta\n");
-        printf("Escolha sua opção:\n");
-        getchar(); // limpa o espaço deixado no buffer do teclado 
-        scanf("%d",&resposta1);
+    }else{ // execultado caso o resultado for falso
 
-        switch (resposta1)
+        printf("\n"); // Para pular uma linha e deixar o codigo mais legivel ao execultar
+        printf("1. Para População \n"); // imprime a mensagem na tela
+        printf("2. Para areá em km²\n"); // imprime a mensagem na tela
+        printf("3. Para puntos turisticos\n"); // imprime a mensagem na tela
+        printf("4. Para PIB\n"); // imprime a mensagem na tela
+        printf("5. Para Densidade populacional\n"); // imprime a mensagem na tela
+        printf("6. PIB Per-Carpta\n"); // imprime a mensagem na tela
+        printf("Escolha sua opção:\n"); // imprime a mensagem na tela
+        scanf("%d",&resposta1); // Faz a leitura, coleta e armazenamento da resposta na variavel
+
+        switch (resposta1) // Função responsavem por iniciar a opção escolhida no menu anterior
         {
-        case 1:
-            resultado = populacao1>=populacao2? 1:0;
-            if (resultado==1)
+        case 1: // valor correspondente a Opção
+            resultado = populacao1>=populacao2? 1:0; // Operador ternario responsavel por fazer a comparação das variaveis
+            if (resultado==1) // Verifica se o resultado é verdadeiro 
             {
-                printf("Jogador 1 venceu!\n");
+                printf("Jogador 1 venceu!\n"); // Imprime da tela a resolução da equação
                 printf("Carta 1. População: %.2f\n", populacao1); // Exibe a população da cidade
                 printf("Carta 2. População: %.2f\n", populacao2); // Exibe a população da cidade
-            }else if (populacao1==populacao2)
+                printf("Parabens!\n"); // imprime a mensagem de empate
+            }else if (populacao1==populacao2) // Verifica se o resultado é falso
             {
-                printf("O jogo empatou!\n");
+                printf("O jogo empatou!\n"); // imprime a mensagem de empate
                 printf("Carta 1. População: %.2f\n", populacao1); // Exibe a população da cidade
                 printf("Carta 2. População: %.2f\n", populacao2); // Exibe a população da cidade
-            }else
+                printf("Parabens!\n"); // imprime a mensagem de empate
+            }else // execultado caso o resultado for falso
             {
-                printf("Jogador 2 venceu!\n");
+                printf("Jogador 2 venceu!\n"); // imprime a mensagem na tela
                 printf("Carta 1. População: %.2f\n", populacao1); // Exibe a população da cidade
                 printf("Carta 2. População: %.2f\n", populacao2); // Exibe a população da cidade
+                printf("Parabens!\n"); // imprime a mensagem de empate
             }
-            break;
+            break; // finaliza o programa
         case 2:
-        resultado = area1>=area2? 1:0;
-        if (resultado==1)
+        resultado = area1>=area2? 1:0; // Operador ternario responsavel por fazer a comparação das variaveis
+        if (resultado==1) // Verifica se o resultado é verdadeiro
         {
-            printf("Jogador 1 venceu!\n");
+            printf("Jogador 1 venceu!\n"); // imprime a mensagem na tela
             printf("Carta 1. Área: %u km²\n", area1); // Exibe a área da cidade
             printf("Carta 2. Área: %u km²\n", area2); // Exibe a área da cidade
-        }else if (area1==area2)
+            printf("Parabens!\n"); // imprime a mensagem de empate
+        }else if (area1==area2) // Verifica se o resultado é falso
         {
-            printf("O jogo empatou!\n");
+            printf("O jogo empatou!\n"); // imprime a mensagem na tela
             printf("Carta 1. Área: %u km²\n", area1); // Exibe a área da cidade
             printf("Carta 2. Área: %u km²\n", area2); // Exibe a área da cidade
-        }else
+            printf("Parabens!\n"); // imprime a mensagem de empate
+        }else  // execultado caso o resultado for falso
         {
-            printf("Jogador 2 venceu!\n");
+            printf("Jogador 2 venceu!\n"); // imprime a mensagem na tela
             printf("Carta 1. Área: %u km²\n", area1); // Exibe a área da cidade
             printf("Carta 2. Área: %u km²\n", area2); // Exibe a área da cidade
+            printf("Parabens!\n"); // imprime a mensagem de empate
         }
-            break;
+            break; // finaliza o programa
         case 3:
-        resultado = turismo1>=turismo2? 1:0;
-        if (resultado==1)
+        resultado = turismo1>=turismo2? 1:0; // Operador ternario responsavel por fazer a comparação das variaveis
+        if (resultado==1) // Verifica se o resultado é verdadeiro
         {
-            printf("Jogador 1 venceu!\n");
+            printf("Jogador 1 venceu!\n"); // imprime a mensagem na tela
             printf("Carta 1. Pontos Turísticos: %d\n", turismo1); // Exibe o número de pontos turísticos da cidade
             printf("Carta 2. Pontos Turísticos: %d\n", turismo2); // Exibe o número de pontos turísticos da cidade
-        }else if (turismo1==turismo2)
+            printf("Parabens!\n"); // imprime a mensagem de empate
+        }else if (turismo1==turismo2) // Verifica se o resultado é falso
         {
-            printf("O jogo empatou!\n");
+            printf("O jogo empatou!\n"); // imprime a mensagem na tela
             printf("Carta 1. Pontos Turísticos: %d\n", turismo1); // Exibe o número de pontos turísticos da cidade
             printf("Carta 2. Pontos Turísticos: %d\n", turismo2); // Exibe o número de pontos turísticos da cidade
-        }else
+            printf("Parabens!\n"); // imprime a mensagem de empate
+        }else  // execultado caso o resultado for falso
         {
-            printf("Jogador 2 venceu!\n");
+            printf("Jogador 2 venceu!\n"); // imprime a mensagem na tela
             printf("Carta 1. Pontos Turísticos: %d\n", turismo1); // Exibe o número de pontos turísticos da cidade
             printf("Carta 2. Pontos Turísticos: %d\n", turismo2); // Exibe o número de pontos turísticos da cidade
+            printf("Parabens!\n"); // imprime a mensagem de empate
         }
-            break;
+            break; // finaliza o programa
         case 4:
-        resultado = pib1>=pib2? 1:0;
-        if (resultado==1)
+        resultado = pib1>=pib2? 1:0; // Operador ternario responsavel por fazer a comparação das variaveis
+        if (resultado==1) // Verifica se o resultado é verdadeiro
         {
-            printf("Jogador 1 venceu!\n");
+            printf("Jogador 1 venceu!\n"); // imprime a mensagem na tela
             printf("Carta 1. PIB: %u\n", pib1); // Exibe o PIB da cidade
             printf("Carta 2. PIB: %u\n", pib2); // Exibe o PIB da cidade
-        }else if (pib1==pib2)
+            printf("Parabens!\n"); // imprime a mensagem de empate
+        }else if (pib1==pib2) // Verifica se o resultado é falso
         {
-            printf("O jogo empatou!\n");
+            printf("O jogo empatou!\n"); // imprime a mensagem na tela
             printf("Carta 1. PIB: %u\n", pib1); // Exibe o PIB da cidade
             printf("Carta 2. PIB: %u\n", pib2); // Exibe o PIB da cidade
-        }else
+            printf("Parabens!\n"); // imprime a mensagem de empate
+        }else // execultado caso o resultado for falso
         {
-            printf("Jogador 2 venceu!\n");
+            printf("Jogador 2 venceu!\n"); // imprime a mensagem na tela
             printf("Carta 1. PIB: %u\n", pib1); // Exibe o PIB da cidade
             printf("Carta 2. PIB: %u\n", pib2); // Exibe o PIB da cidade
+            printf("Parabens!\n"); // imprime a mensagem de empate
         }
-            break;
+            break; // finaliza o programa
         case 5:
-        resultado = densidade1<=densidade2? 1:0;
-        if (resultado==1)
+        resultado = densidade1<=densidade2? 1:0; // Operador ternario responsavel por fazer a comparação das variaveis
+        if (resultado==1) // Verifica se o resultado é verdadeiro
         {
-            printf("Jogador 1 venceu!\n");
-            printf("Carta 1. Densidade populacional: %.2f, had/km²\n", densidade1);// Exibe a densidade populacional da cidade
-            printf("Carta 2. Densidade populacional: %.2f, had/km²\n", densidade2);// Exibe a densidade populacional da cidade
-        }else if (densidade1==densidade2)
+            printf("Jogador 1 venceu!\n"); // imprime a mensagem na tela
+            printf("Carta 1. Densidade populacional: %.2f, had/km²\n", densidade1); // Exibe a densidade populacional da cidade
+            printf("Carta 2. Densidade populacional: %.2f, had/km²\n", densidade2); // Exibe a densidade populacional da cidade
+            printf("Parabens!\n"); // imprime a mensagem de empate
+        }else if (densidade1==densidade2) // Verifica se o resultado é falso
         {
-            printf("O jogo empatou!\n");
-            printf("Carta 1. Densidade populacional: %.2f, had/km²\n", densidade1);// Exibe a densidade populacional da cidade
-            printf("Carta 2. Densidade populacional: %.2f, had/km²\n", densidade2);// Exibe a densidade populacional da cidade
-        }else
+            printf("O jogo empatou!\n"); // imprime a mensagem na tela
+            printf("Carta 1. Densidade populacional: %.2f, had/km²\n", densidade1); // Exibe a densidade populacional da cidade
+            printf("Carta 2. Densidade populacional: %.2f, had/km²\n", densidade2); // Exibe a densidade populacional da cidade
+            printf("Parabens!\n"); // imprime a mensagem de empate
+        }else // execultado caso o resultado for falso
         {
-            printf("Jogador 2 venceu!\n");
-            printf("Carta 1. Densidade populacional: %.2f, had/km²\n", densidade1);// Exibe a densidade populacional da cidade
-            printf("Carta 2. Densidade populacional: %.2f, had/km²\n", densidade2);// Exibe a densidade populacional da cidade
+            printf("Jogador 2 venceu!\n"); // imprime a mensagem na tela
+            printf("Carta 1. Densidade populacional: %.2f, had/km²\n", densidade1); // Exibe a densidade populacional da cidade
+            printf("Carta 2. Densidade populacional: %.2f, had/km²\n", densidade2); // Exibe a densidade populacional da cidade
+            printf("Parabens!\n"); // imprime a mensagem de empate
         }
-            break;
+            break; // finaliza o programa
         case 6:
-        resultado = renda1>=renda2? 1:0;
-        if (resultado==1)
+        resultado = renda1>=renda2? 1:0; // Operador ternario responsavel por fazer a comparação das variaveis
+        if (resultado==1) // Verifica se o resultado é verdadeiro
         {
-            printf("Jogador 1 venceu!\n");
-            printf("Carta 1. PIB per capita: %.3f, de rais\n", renda1);// exibe o PIB per capita
-            printf("Carta 2. PIB per capita: %.3f, de rais\n", renda2);// exibe o PIB per capita
-
-        }else if (renda1==renda2)
+            printf("Jogador 1 venceu!\n"); // imprime a mensagem na tela
+            printf("Carta 1. PIB per capita: %.3f, de rais\n", renda1); // exibe o PIB per capita
+            printf("Carta 2. PIB per capita: %.3f, de rais\n", renda2); // exibe o PIB per capita
+            printf("Parabens!\n"); // imprime a mensagem de empate
+        }else if (renda1==renda2) // Verifica se o resultado é falso
         {
-            printf("O jogo empatou!\n");
-            printf("Carta 1. PIB per capita: %.3f, de rais\n", renda1);// exibe o PIB per capita
-            printf("Carta 2. PIB per capita: %.3f, de rais\n", renda2);// exibe o PIB per capita
-
-        }else
+            printf("O jogo empatou!\n"); // imprime a mensagem na tela
+            printf("Carta 1. PIB per capita: %.3f, de rais\n", renda1); // exibe o PIB per capita
+            printf("Carta 2. PIB per capita: %.3f, de rais\n", renda2); // exibe o PIB per capita
+            printf("Parabens!\n"); // imprime a mensagem de empate
+        }else // execultado caso o resultado for falso
         {
-            printf("Jogador 2 venceu!\n");
-            printf("carta 1. PIB per capita: %.3f, de rais\n", renda1);// exibe o PIB per capita
-            printf("carta 2. PIB per capita: %.3f, de rais\n", renda2);// exibe o PIB per capita
-
+            printf("Jogador 2 venceu!\n"); // imprime a mensagem na tela
+            printf("carta 1. PIB per capita: %.3f, de rais\n", renda1); // exibe o PIB per capita
+            printf("carta 2. PIB per capita: %.3f, de rais\n", renda2); // exibe o PIB per capita
+            printf("Parabens!\n"); // imprime a mensagem de empate
         }
-            break;
-        default:
-        printf("Opção inalida\n");
-            break;
+            break; // finaliza o programa
+        default: // função que inicializa caso seja inserido algum valor diferente do pre-definido
+        printf("Opção inalida\n"); // imprime a mensagem na tela caso seja inserida diferente do esperado
+            break; // finaliza o programa
         }
     }
     
