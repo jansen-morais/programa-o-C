@@ -122,45 +122,69 @@ int main() { // Função principal do programa
         if (populacao1 > populacao2) { // Verifica se a população1 é maior que população2
             printf("A carta 1 venceu no queisto, população...\n"); // Imprime mensagem se a população1 for maior
             verdadeiras++; // Incrementa o contador de respostas verdadeiras
+            printf("Carta 1. População: %.2f\n", populacao1); // Exibe a população da cidade
+            printf("Carta 2. População: %.2f\n", populacao2); // Exibe a população da cidade
         } else { // Se a população1 não for maior que a população2
             printf("A carta 2 venceu no queisto, população...\n"); // Imprime mensagem se a temperatura estiver dentro dos parâmetros
             falsas++; // Incrementa o contador de respostas falsas
+            printf("Carta 1. População: %.2f\n", populacao1); // Exibe a população da cidade
+            printf("Carta 2. População: %.2f\n", populacao2); // Exibe a população da cidade
         }
 
         if (area1 > area2) { // Verifica se a area1 é maior que area2
             printf("A carta 1 venceu no queisto, Km²...\n"); // Imprime mensagem se a area1 for maior
+            printf("Carta 1. Área: %u km²\n", area1); // Exibe a área da cidade
+            printf("Carta 2. Área: %u km²\n", area2); // Exibe a área da cidade
             verdadeiras++; // Incrementa o contador de respostas verdadeiras
         } else { // Se a area1 não for maior que area2
             printf("A carta 2 venceu no queisto, km²...\n"); // Imprime mensagem se a area2 for maior que area1
+            printf("Carta 1. Área: %u km²\n", area1); // Exibe a área da cidade
+            printf("Carta 2. Área: %u km²\n", area2); // Exibe a área da cidade
             falsas++; // Incrementa o contador de respostas falsas
         }
 
         if (turismo1 > turismo2) { // Verifica se o turismo1 é maior que o turismo2
             printf("A carta 1 venceu no queisto, pontos turiscos...\n"); // Imprime mensagem se o se o turismo1 fo maior
+            printf("Carta 1. Pontos Turísticos: %d\n", turismo1); // Exibe o número de pontos turísticos da cidade
+            printf("Carta 2. Pontos Turísticos: %d\n", turismo2); // Exibe o número de pontos turísticos da cidade
             verdadeiras++; // Incrementa o contador de respostas verdadeiras
         } else { // Se o turismo1 não for menor que o turismo2
             printf("A carta 2 venceu no queisto, pontos turiscos...\n"); // Imprime mensagem se o turismo2 for maior
+            printf("Carta 1. Pontos Turísticos: %d\n", turismo1); // Exibe o número de pontos turísticos da cidade
+            printf("Carta 2. Pontos Turísticos: %d\n", turismo2); // Exibe o número de pontos turísticos da cidade
             falsas++; // Incrementa o contador de respostas falsas
         }
         if (pib1 > pib2){ // verifica se o pib1 e maior que o pib2
             printf("A carta 1 venceu no queisto, PIB...\n"); // imprime a mensagem se o pib1 for maior
+            printf("Carta 1. PIB: %u\n", pib1); // Exibe o PIB da cidade
+            printf("Carta 2. PIB: %u\n", pib2); // Exibe o PIB da cidade
             verdadeiras++;// incrementa o contador de resposta
         }else{ //se o pib2 for mao que o pib1
             printf("A carta 2 venceu no queisto, PIB...\n"); // imprime a mensagen se o pib2 for maior
+            printf("Carta 1. PIB: %u\n", pib1); // Exibe o PIB da cidade
+            printf("Carta 2. PIB: %u\n", pib2); // Exibe o PIB da cidade
             falsas++; // incrementa a contador de respostas falsas
         }
         if (densidade1 < densidade2){ // verifica se o densidade1 e maior que o densidade2
             printf("A carta 1 venceu no queisto, densidade populacional...\n"); // imprime a mensagem se o pib1 for maior
+            printf("Carta 1. Densidade populacional: %.2f, had/km²\n", densidade1); // Exibe a densidade populacional da cidade
+            printf("Carta 2. Densidade populacional: %.2f, had/km²\n", densidade2); // Exibe a densidade populacional da cidade
             verdadeiras++;// incrementa o contador de resposta
         }else{ //se o densidade2 for mao que o densidade1
             printf("A carta 2 venceu no queisto, densidade popuplacional...\n"); // imprime a mensagen se o densidade2 for maior
+            printf("Carta 1. Densidade populacional: %.2f, had/km²\n", densidade1); // Exibe a densidade populacional da cidade
+            printf("Carta 2. Densidade populacional: %.2f, had/km²\n", densidade2); // Exibe a densidade populacional da cidade
             falsas++; // incrementa a contador de respostas falsas
         }
         if (renda1 > renda2){ // verifica se o renda1 e maior que o renda2
             printf("A carta 1 venceu no queisto, PIB per-capta...\n"); // imprime a mensagem se o renda1 for maior
+            printf("Carta 1. PIB per capita: %.3f, de rais\n", renda1); // exibe o PIB per capita
+            printf("Carta 2. PIB per capita: %.3f, de rais\n", renda2); // exibe o PIB per capita
             verdadeiras++;// incrementa o contador de resposta
         }else{ //se o renda2 for mao que o renda1
             printf("A carta 2 venceu no queisto, PIB per-capita...\n"); // imprime a mensagen se o renda2 for maior
+            printf("Carta 1. PIB per capita: %.3f, de rais\n", renda1); // exibe o PIB per capita
+            printf("Carta 2. PIB per capita: %.3f, de rais\n", renda2); // exibe o PIB per capita
             falsas++; // incrementa a contador de respostas falsas
         }
 
