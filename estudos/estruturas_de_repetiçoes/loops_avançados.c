@@ -2,7 +2,7 @@
 int main(){
 
 //um exemplo de loop com múltiplas variáveis!
-for (int i = 0, j = 10; i < j; i++, j--) 
+for (int i = 0, j = 10; i < j; i++, j--) // Bom para usar com varios valores ao mesmo tempo
 {
     printf("i = %d, j = %d\n", i, j);
 }
