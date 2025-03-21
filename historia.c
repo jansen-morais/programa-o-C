@@ -5,6 +5,8 @@
 #include <stdlib.h> //Inclui a biblioteca stdlib.h, que contém funções gerais, como atoi 
 //(para converter uma string para um inteiro).
 #include <stdarg.h>//paa lidar com a manipulação de argumentos variaveis
+#include <stdlib.h> // Biblioteca padrão de funções gerais (rand, srand)
+#include <string.h> // Adicionado: Inclui a biblioteca string.h para usar strcmp()
 
 void limpar_buffer() {
     int c;
@@ -79,12 +81,19 @@ char resposta[4];
             resposta[i]=tolower(resposta[i]);
         }
     if(strcmp(resposta,"sim")==0){
+        char repetir ;
+        while (repetir == 'sim'|| repetir == 'SIM')
+        {
+            /* code */
+        }
+        
+        
         print_digitado("Voçê sabia que\n");
 
         print_digitado("Todas as corujas têm uma postura ereta e olhos para frente,\n");
-sleep(1.5);
+        sleep(1.5);
         print_digitado("o que as dá visão binocular, como a dos seres humanos.\n");
-        //sleep(1);
+        sleep(1);
         print_digitado("Entretanto, os olhos delas não são esferas,\n");
         sleep(1);
         print_digitado("mas sim tubos que providenciam uma percepção de profundidade melhor e permite que elas vejam suas presas a grande distância\n");
@@ -94,7 +103,9 @@ sleep(1.5);
         print_digitado("e tambem os olhos de uma coruja têm uma estrutura óssea como suporte, o que não permite que eles se virem.\n");
         sleep(1.5);
         print_digitado("por conta disso, elas conseguem virar a cabeça por 270 graus(135 para cada lado)\n");
-        sleep(1);
+        sleep(1.5);
+        print_digitado("suprindo então a questão da não movimentação ocular...\n");
+        sleep(1.5);
         print_digitado("Legau né?\n");
         sleep(1.5);
         print_digitado("no mais é so isso, ate a proxima\n...\n");

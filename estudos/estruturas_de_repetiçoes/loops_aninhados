@@ -1,0 +1,79 @@
+#include <stdio.h>
+/*Aqui veremos os loops dentro de outras.
+para cada execulção externa será execultado uma ação interna completa*/
+ 
+int main() {
+    int i = 1;
+
+
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= 5; j++) {
+            if ((i + j) % 2 == 0) {
+                printf("(%d, %d)\n", i, j);
+            }
+        }
+    }
+
+        int n = 5; // altura do triângulo
+ 
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    int segundos;
+   
+    for (segundos = 10; segundos >= 0; segundos--) {
+        printf("%d\n", segundos);
+       
+        // Loop aninhado para simular um atraso
+        for (int i = 0; i < 100000000; i++) {
+            // Apenas para simular um atraso
+        }
+    }
+ 
+    printf("Fogos de artifício!\n");
+
+
+    //Taboada de multiplicação 
+    for (int i = 1; i <= 10; i++) { 
+        for (int j = 1; j <= 10; j++) {
+            printf("%d x %d = %d\n", i, j, i * j);
+        }
+        printf("\n"); // vai pular uma linha quando finalizar o loop interno, e somente depois disso 
+    }
+
+
+
+    /*for (int i = 1; i <= 10; i++) { // Loop externo
+        for (int j = 1; j <= 10; j++) { // loop interno
+            printf("%d\t", i * j);
+        }
+        printf("\n");
+    }
+
+    while (i <= 10) { // Loop externo
+        int j = 1;
+        while (j <= 10) {// loop interno
+            printf("%d\t", i * j);
+            j++; // Cada incremento tem que estar dentro de seu respectivo loop
+        }
+        printf("\n");
+        i++; // Cada incremento tem que estar dentro de seu respectivo loop
+    }
+
+    do { // Loop externo
+        int j = 1; // Cada incremento tem que estar dentro de seu respectivo loop
+        do { // loop externo interno
+            printf("%d\t", i * j);
+            j++; // Cada incremento tem que estar dentro de seu respectivo loop
+        } while (j <= 10); // loop interno
+        printf("\n");
+        i++; // Cada incremento tem que estar dentro de seu respectivo loop
+    } while (i <= 10);// loop interno*/
+    
+    
+    return 0;
+}
