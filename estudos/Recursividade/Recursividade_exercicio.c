@@ -12,7 +12,7 @@ void recursivo(int numero){ // Ao usar "recursividade" o ideal é que usemos o "
     // "depois da função" que vai acrecentar 
     }
 }
-
+//
 int main(){
 
     int quantidade = 10;
