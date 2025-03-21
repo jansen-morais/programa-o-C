@@ -1,4 +1,5 @@
 #include <stdio.h> // Biblioteca padrão de entrada e saída (printf, scanf)
+// As dua bibliotecas a seguir fazen a função de sim e não funcionarem.
 #include <stdlib.h> // Biblioteca padrão de funções gerais (rand, srand)
 #include <string.h> // Adicionado: Inclui a biblioteca string.h para usar strcmp()
 
@@ -109,7 +110,7 @@ int main() { // Função principal do programa
     scanf("%3s",&resposta); // Le e armazena a resposta na variavem correta
     getchar(); // limpa o bufer do teclado
     
-
+// Função do "if/else" que deixa mais simples o ato de pergunta sim e não 
     if (strcmp(resposta, "sim") == 0) //  Usa strcmp() para comparar strings
     { /*strcmp(resposta, "sim") compara a string armazenada em resposta com a string literal "sim".
         A função strcmp() retorna 0 se as strings forem iguais. 
