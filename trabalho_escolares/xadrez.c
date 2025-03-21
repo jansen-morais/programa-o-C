@@ -40,7 +40,7 @@ int main(){
     } while (rainha <= 8);
     printf("Movimentou 8 casas na horizontal.\nFim do movimento da Rainha...\n");
     
-    while (cavalo--)
+    while (cavalo--) // Aqui fara o decressimo de 1
     {
         for(int i = 0; i < 2; i++)
         {
