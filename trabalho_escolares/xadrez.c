@@ -7,6 +7,7 @@ int main(){
     int rainha = 1;
     int torre = 1;
     int bispo = 1;
+    int cavalo = 1;
 
 
         printf("### Xadrez ###\n\n");
@@ -34,10 +35,19 @@ int main(){
 
     do
     {
-        printf("Uma casa para a Direita\n");
+        printf("Uma casa para a Direita\n\n");
         rainha++;
     } while (rainha <= 8);
     printf("Movimentou 8 casas na horizontal.\nFim do movimento da Rainha...\n");
+    
+    while (cavalo--)
+    {
+        for(int i = 0; i < 2; i++)
+        {
+            printf(" MOvimento pra cima\n"); // Impreme o moviment pra cima 2 vezes
+        }
+        printf("Movimento para esquerda\n"); // Imprime o moimento para esquerda 
+    }
     
     
 
