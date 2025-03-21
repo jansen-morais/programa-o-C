@@ -5,7 +5,7 @@ int main() {
     int num;
     int opcao;
    
-    do { // esta função vão rodar pelomenos uma vez sendo verdadeir ou falso a condição 
+    /*do { // esta função vão rodar pelomenos uma vez sendo verdadeir ou falso a condição 
         printf("%d\n", i);
         i++; // lembrar de sempre incrementar para não gerar o loope
     } while (i <= 5);

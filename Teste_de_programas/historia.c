@@ -81,12 +81,11 @@ char resposta[4];
             resposta[i]=tolower(resposta[i]);
         }
     if(strcmp(resposta,"sim")==0){
-        char repetir ;
-        while (repetir == 'sim'|| repetir == 'SIM')
-        {
-            /* code */
-        }
         
+        char repetir[4];
+// Aqui usarei o "do/while" pois preciso que execulte almenos uam vez antes do loop       
+       do
+       {
         
         print_digitado("Voçê sabia que\n");
 
@@ -110,8 +109,16 @@ char resposta[4];
         sleep(1.5);
         print_digitado("no mais é so isso, ate a proxima\n...\n");
         sleep(2);
-
-
+        print_digitado("Quer ouvir novamente?\n");
+        scanf("%3s",&repetir);
+         // esta função forçara a conversão do "sim" para minusculo caso precise
+        for (int i = 0; repetir[i]; i++) {
+            repetir[i] = tolower(repetir[i]);
+        }
+// Para que executea tarefa coloquei a mesma forma que esta no "if" porem dentro do "whilo"
+       } while (strcmp(repetir,"sim")==0);
+       
+       print_digitado("\nTudo bem, ate a proxima!\n\n");
 
     }else{
         print_digitado("Tudo bem então...\n");
